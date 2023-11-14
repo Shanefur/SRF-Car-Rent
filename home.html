@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | SRF</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/home.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.png"
+      type="image/svg+xml"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const blogLink = document.querySelector('a[href="#blog"]');
+        blogLink.addEventListener('click', function (e) {
+          e.preventDefault();
+          const blogSection = document.getElementById('blog');
+          blogSection.scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    
+   
+    document.addEventListener('DOMContentLoaded', function () {
+      const featuredCarsLink = document.querySelector('a[href="#featured-car"]');
+      featuredCarsLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        const featuredCarsSection = document.getElementById('featured-car');
+        featuredCarsSection.scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+  </head>
+  <body>
+    <div class="header fade-in">
+      <div class="header-content">
+        <div class="logo">
+          <a href="#">
+            <img
+              src="./assets/images/logo.png"
+              alt="SRF logo"
+              style="border-radius: 10px"
+            />
+          </a>
+
+          <h1 class="title">SRF Motors</h1>
+        </div>
+
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+            <li>
+              <a href="home.html" class="navbar-link"> Home </a>
+            </li>
+           
+            <li>
+              <a href="about-us.html" class="navbar-link"> About us </a>
+              
+            </li>
+            <li>
+              <a href="#blog" class="navbar-link"> Blog </a>
+            </li>
+            <li class="primary">
+              <a href="login.html" class="navbar-link"> Upload </a>
+            </li>
+            
+          </ul>
+        
+          
+        </nav>
+       
+        </div>
+        <div class="mobile-nav-button" onclick="toggleMobileNav()" >
+          <ion-icon name="menu-outline"></ion-icon>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="pad"
+      style="
+        background-image: url(./assets/images/mclaren-home.jpg);
+        height: 100vh;
+        width: calc(100vw);
+        color: white;
+        position: relative;
+      "
+    class="back fade-in">
+      <div
+        style="
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        "
+      >
+        <h1 class="main float-in" >
+          The Ease to Lease
+        </h1>
+        
+        <p class="main2 swing-in">
+          Experience the hassle-free way to lease your dream car in the
+          picturesque state of Goa.
+        </p>
+        <p class="main2 swing-in">
+          Whether you're a local or a visitor, our platform offers a seamless
+          process to get you
+        </p>
+        <p  class="main2 swing-in">behind the wheel of the perfect vehicle.</p>
+        <p class="main2 swing-in" >
+          Say goodbye to the complexities of car rentals and embrace the
+          simplicity of leasing.
+        </p>
+        <p class="main2 swing-in">
+          Discover the freedom of exploring Goa on your terms, all with just a
+          few clicks away!
+        </p>
+        <p class="main2 swing-in">Only in Goa!</p>
+      
+      </div>
+    </div>
+    
+   
+    <div style="width: 80%; margin: auto" id="featured-car">
+      <!-- All Cars -->
+      <h1 class="heading-1">All Cars</h1>
+
+      <div class="grid-container flip-in" id="carList">
+        <!-- <div class="grid-items">
+          <div class="card">
+            <img src="./assets/images/car-1.jpg" alt="Maruti Zen" />
+            <div class="card-content">
+              <p class="card-text">
+                <span style="font-weight: bold">Brand:</span> Maruti Zen
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">People:</span> 4
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Fuel:</span> Petrol
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Km per 1 litre:</span> 35
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Gears:</span> Manual
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Cost:</span> 35000
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="grid-items">
+          <div class="card">
+            <img src="./assets/images/car-1.jpg" alt="Maruti Zen" />
+            <div class="card-content">
+              <p class="card-text">
+                <span style="font-weight: bold">Brand:</span> Maruti Zen
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">People:</span> 4
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Fuel:</span> Petrol
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Km per 1 litre:</span> 35
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Gears:</span> Manual
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Cost:</span> 35000
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="grid-items">
+          <div class="card">
+            <img src="./assets/images/car-1.jpg" alt="Maruti Zen" />
+            <div class="card-content">
+              <p class="card-text">
+                <span style="font-weight: bold">Brand:</span> Maruti Zen
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">People:</span> 4
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Fuel:</span> Petrol
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Km per 1 litre:</span> 35
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Gears:</span> Manual
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Cost:</span> 35000
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="grid-items">
+          <div class="card">
+            <img src="./assets/images/car-1.jpg" alt="Maruti Zen" />
+            <div class="card-content">
+              <p class="card-text">
+                <span style="font-weight: bold">Brand:</span> Maruti Zen
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">People:</span> 4
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Fuel:</span> Petrol
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Km per 1 litre:</span> 35
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Gears:</span> Manual
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Cost:</span> 35000
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="grid-items">
+          <div class="card">
+            <img src="./assets/images/car-1.jpg" alt="Maruti Zen" />
+            <div class="card-content">
+              <p class="card-text">
+                <span style="font-weight: bold">Brand:</span> Maruti Zen
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">People:</span> 4
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Fuel:</span> Petrol
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Km per 1 litre:</span> 35
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Gears:</span> Manual
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Cost:</span> 35000
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="grid-items">
+          <div class="card">
+            <img src="./assets/images/car-1.jpg" alt="Maruti Zen" />
+            <div class="card-content">
+              <p class="card-text">
+                <span style="font-weight: bold">Brand:</span> Maruti Zen
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">People:</span> 4
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Fuel:</span> Petrol
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Km per 1 litre:</span> 35
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Gears:</span> Manual
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Cost:</span> 35000
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="grid-items">
+          <div class="card">
+            <img src="./assets/images/car-1.jpg" alt="Maruti Zen" />
+            <div class="card-content">
+              <p class="card-text">
+                <span style="font-weight: bold">Brand:</span> Maruti Zen
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">People:</span> 4
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Fuel:</span> Petrol
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Km per 1 litre:</span> 35
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Gears:</span> Manual
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Cost:</span> 35000
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="grid-items">
+          <div class="card">
+            <img src="./assets/images/car-1.jpg" alt="Maruti Zen" />
+            <div class="card-content">
+              <p class="card-text">
+                <span style="font-weight: bold">Brand:</span> Maruti Zen
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">People:</span> 4
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Fuel:</span> Petrol
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Km per 1 litre:</span> 35
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Gears:</span> Manual
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Cost:</span> 35000
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="grid-items">
+          <div class="card">
+            <img src="./assets/images/car-1.jpg" alt="Maruti Zen" />
+            <div class="card-content">
+              <p class="card-text">
+                <span style="font-weight: bold">Brand:</span> Maruti Zen
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">People:</span> 4
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Fuel:</span> Petrol
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Km per 1 litre:</span> 35
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Gears:</span> Manual
+              </p>
+              <p class="card-text">
+                <span style="font-weight: bold">Cost:</span> 35000
+              </p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+ 
+    <div style="padding: 1rem"></div>
+
+    <!-- Get started with 4 simple steps -->
+    <div class="steps fade-in" style="background-color: #ff7a4c; padding-bottom: 0.5rem">
+      <div style="width: 80%; margin: auto">
+        <h1 style="padding: 0.5rem 1rem">Get started with 4 simple steps</h1>
+        <div class="grid-container">
+          <div class="grid-items">
+            <div
+              class="card"
+              style="box-shadow: none; padding: 1rem; height: 380px"
+            >
+              <div class="card-content">
+                <div class="card-icon icon-1">
+                  <ion-icon name="person-add-outline"></ion-icon>
+                </div>
+                <p class="heading-2">Create a profile</p>
+                <p class="small">
+                  "Create a profile for personalized experiences—faster checkouts, order tracking, and tailored recommendations. Your information is secure. Create your profile now!"
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="grid-items">
+            <div
+              class="card"
+              style="box-shadow: none; padding: 1rem; height: 380px"
+            >
+              <div class="card-content">
+                <div class="card-icon icon-1">
+                  <ion-icon name="car-outline"></ion-icon>
+                </div>
+                <p class="heading-2">Tell us what car you want</p>
+                <p class="small">
+                
+                  "Help us find your perfect car! Share preferences for a tailored experience. Your input is confidential. Ready to get started? Let us know!"
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="grid-items">
+            <div
+              class="card"
+              style="box-shadow: none; padding: 1rem; height: 380px"
+            >
+              <div class="card-content">
+                <div class="card-icon icon-1">
+                  <ion-icon name="person-outline"></ion-icon>
+                </div>
+                <p class="heading-2">Match with seller</p>
+                <p class="small">
+                 
+                  "Find the perfect match on our platform. Connect with sellers offering what you need. Provide preferences, and we'll handle the rest. Let's get started!"
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="grid-items">
+            <div
+              class="card"
+              style="box-shadow: none; padding: 1rem; height: 380px"
+            >
+              <div class="card-content">
+                <div class="card-icon icon-1">
+                  <ion-icon name="card-outline"></ion-icon>
+                </div>
+                <p class="heading-2">Make a deal</p>
+                <p class="small">
+                 
+                  "Ready to seal the deal? Find your ideal match and confidently proceed with our seamless transaction process. We guide you every step. Let's make it happen!"
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog -->
+    <section class="section blog swing-in" id="blog">
+      <div class="container">
+        <h2 class="h2 section-title">Our Blog</h2>
+
+        <ul class="blog-list has-scrollbar">
+          <li>
+            <div class="blog-card">
+              <figure class="card-banner">
+                <a href="home.html">
+                  <img
+                    src="./assets/images/blog-1.jpg"
+                    alt="Opening of new offices of the company"
+                    loading="lazy"
+                    class="w-100"
+                  />
+                </a>
+
+                <a href="home.html" class="btn card-badge">Company</a>
+              </figure>
+
+              <div class="card-content">
+                <h3 class="h3 card-title">
+                  <a href="home.html">Opening of new offices of the company</a>
+                </h3>
+
+                <div class="card-meta">
+                  <div class="publish-date">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="2022-01-14">June 18, 2001</time>
+                  </div>
+
+                  <div class="comments">
+                    <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+
+                    <data value="127">127</data>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="blog-card">
+              <figure class="card-banner">
+                <a>
+                  <img
+                    src="./assets/images/blog-2.jpg"
+                    alt="What cars are most vulnerable"
+                    loading="lazy"
+                    class="w-100"
+                  />
+                </a>
+
+                <a class="btn card-badge">Repair</a>
+              </figure>
+
+              <div class="card-content">
+                <h3 class="h3 card-title">
+                  <a>What cars are most vulnerable and Why?</a>
+                </h3>
+
+                <div class="card-meta">
+                  <div class="publish-date">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="2022-01-14">September 28, 2022</time>
+                  </div>
+
+                  <div class="comments">
+                    <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+
+                    <data value="342">342</data>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="blog-card">
+              <figure class="card-banner">
+                <a href="#featured-car">
+                  <img
+                    src="./assets/images/blog-3.jpg"
+                    alt="Statistics showed which average age"
+                    loading="lazy"
+                    class="w-100"
+                  />
+                </a>
+
+                <a href="#featured-car" class="btn card-badge">Cars</a>
+              </figure>
+
+              <div class="card-content">
+                <h3 class="h3 card-title">
+                  <a href="#featured-car"
+                    >Statistics showed the Cars average age</a
+                  >
+                </h3>
+
+                <div class="card-meta">
+                  <div class="publish-date">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="2022-01-14">January 14, 2016</time>
+                  </div>
+
+                  <div class="comments">
+                    <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+
+                    <data value="200">200</data>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="blog-card ">
+              <figure class="card-banner">
+                <a href="#featured-car">
+                  <img
+                    src="./assets/images/blog-4.jpg"
+                    alt="What´s required when renting a car?"
+                    loading="lazy"
+                    class="w-100"
+                  />
+                </a>
+
+                <a href="#featured-car" class="btn card-badge">Cars</a>
+              </figure>
+
+              <div class="card-content">
+                <h3 class="h3 card-title">
+                  <a href="#featured-car"
+                    >Details About Various Types of Cars?</a
+                  >
+                </h3>
+
+                <div class="card-meta">
+                  <div class="publish-date">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="2022-01-14">December 20, 2012</time>
+                  </div>
+
+                  <div class="comments">
+                    <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+
+                    <data value="114">114</data>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="blog-card">
+              <figure class="card-banner">
+                <a href="about-us.html">
+                  <img
+                    src="./assets/images/blog-5.jpg"
+                    alt="New rules for handling our cars"
+                    loading="lazy"
+                    class="w-100"
+                  />
+                </a>
+
+                <a href="about-us.html" class="btn card-badge">Company</a>
+              </figure>
+
+              <div class="card-content">
+                <h3 class="h3 card-title">
+                  <a href="about-us.html">New rules for Usage and handling our cars</a>
+                </h3>
+
+                <div class="card-meta">
+                  <div class="publish-date">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="2022-01-14">April 23, 2007</time>
+                  </div>
+
+                  <div class="comments">
+                    <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+
+                    <data value="298">298</data>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+ <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer fade-in">
+    <div class="container">
+
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <img src="assets/images/logo.png" alt="SRF" class="lfooter">
+          </a>
+          
+          <p class="footer-text">
+            Search for cheap rental cars in Goa. With a diverse fleet of  vehicles, SRF offers its
+            consumers an
+            attractive and fun selection.
+          </p>
+        </div>
+        
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Company</p>
+          </li>
+
+          <li>
+            <a href="about-us.html" class="footer-link">About us</a>
+          </li>
+
+          <li>
+            <a href="#featured-car" class="footer-link">Pricing plans</a>
+          </li>
+
+          <li>
+            <a href="#blog" class="footer-link">Our blog</a>
+          </li>
+
+          <li>
+            <a href="about-us.html" class="footer-link">Contacts</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Support</p>
+          </li>
+
+          <li>
+            <a href="about-us.html" class="footer-link">Help center</a>
+          </li>
+
+          <li>
+            <a href="about-us.html" class="footer-link">Ask a question</a>
+          </li>
+
+          <li>
+            <a class="footer-link">Privacy policy</a>
+          </li>
+
+          <li>
+            <a class="footer-link">Terms & conditions</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Locations</p>
+          </li>
+
+          <li>
+            <a class="footer-link">Mapusa</a>
+          </li>
+
+          <li>
+            <a  class="footer-link">Candolim</a>
+          </li>
+
+          <li>
+            <a  class="footer-link">Vagator</a>
+          </li>
+
+          <li>
+            <a  class="footer-link">Quepem</a>
+          </li>
+
+          <li>
+            <a  class="footer-link">Margao</a>
+          </li>
+
+          <li>
+            <a  class="footer-link">Colva</a>
+          </li>
+
+          <li>
+            <a  class="footer-link">Assolna</a>
+          </li>
+
+          <li>
+            <a  class="footer-link">Panjim</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <ul class="social-list">
+
+          <li>
+            <a href="https://www.facebook.com/" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.instagram.com/" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://twitter.com/?lang=en-in" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.linkedin.com/notifications/?filter=all" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          
+          <li>
+            <a href="https://mail.google.com/mail/u/0/#inbox" class="social-link">
+              <ion-icon name="mail-outline"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+        <p class="copyright">
+         SRF.CO </br>Shane Ray Furtado</br>All Rights Reserved
+        </p>
+
+      </div>
+
+    </div>
+  </footer>
+    <!-- 
+    - custom js link
+  -->
+    <script src="./assets/js/home.js"></script>
+
+    <!-- 
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

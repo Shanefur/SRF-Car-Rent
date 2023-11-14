@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/svg+xml">
+    <link rel="stylesheet" href="./assets/css/about-us.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <!-- Add the required links for fonts, font-awesome, and scripts as mentioned in the HTML -->
+    <style>
+        .auform {
+          position: sticky;
+          top: 20px; /* Change this value according to your layout */
+          width: 100%;
+          z-index: 1000; /* Ensures it stays above content */
+          background-color: white; /* Change this according to your design */
+          padding: 20px; /* Adjust as needed */
+          border: 1px solid #ccc; /* Just for visualization */
+        }
+        .aucontainer {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          animation: fade-in 1;
+        }
+
+        
+   
+  
+       
+      </style>
+  </head>
+  <body>
+    <header class="header fade-in" data-header>
+      <div class="container">
+        
+        <div class="overlay" data-overlay></div>
+        <a href="home.html" class="logo">
+          <img src="assets/images/logo.png" alt="SRF logo" width="50" height="50" >
+        </a>
+       <h1>SRF Motors</h1>
+        <nav class="navbar hidden" data-navbar>
+          <ul class="navbar-list">
+            <li>
+              <a href="home.html" class="navbar-link" data-nav-link>Home</a>
+            </li>
+            <li>
+              <a href="about-us.html" class="navbar-link" data-nav-link
+                >About us</a
+              >
+            </li>
+            <li>
+              <a href="home.html#blog" class="navbar-link" data-nav-link>Blog</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <div class="header-contact"></div>
+          <button
+            class="nav-toggle-btn"
+            data-nav-toggle-btn
+            aria-label="Toggle Menu"
+          >
+            <span class="one"></span>
+            <span class="two"></span>
+            <span class="three"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <br><br><br><br>
+    <div class="aucontainer">
+        <div class="auform">
+          <div class="aucontact-info flip-in">
+            <h3 class="autitle">Let's get in touch</h3>
+            <br><br>
+            <p class="autext">
+                Have any questions or inquiries? Drop us a line! We'd love to hear
+                from you.
+            </p>
+            <div class="auinfo">
+              <div class="auinformation">
+                <p>Patto Centre, Panaji, Goa</p>
+              </div>
+              <div class="auinformation">
+                <p>srf.rentals@gmail.com</p>
+              </div>
+              <div class="auinformation">
+                <p>+91 98765 43210</p>
+              </div>
+            </div>
+            <div class="ausocial-media">
+              <p>Connect with us :</p>
+              <div class="ausocial-icons">
+                  <!-- Facebook -->
+                  <a href="https://www.facebook.com/" class="social-link">
+                    <i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
+                  </a>
+                  <!-- Instagram -->
+                  <a href="https://www.instagram.com/" class="social-link">
+                    <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+                  </a>
+                  <!-- Twitter -->
+                  <a href="https://twitter.com/?lang=en-in" class="social-link">
+                    <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
+                  </a>
+                  <!-- Gmail -->
+                  <a href="https://mail.google.com/mail/u/0/#inbox" class="social-link">
+                    <i class="fa-solid fa-envelope" style="color: #ffffff;"></i>
+                  </a>
+              </div>
+              <br />
+          </div>
+          
+          </div>
+          <div class="aucontact-form swing-in">
+            <span class="aucircle one"></span>
+            <span class="aucircle two"></span>
+            <form action="home.html" autocomplete="off">
+              <br>
+             <center> <h3 class="autitle">Contact us</h3></center>
+              <div class="auinput-container">
+                <input type="text" name="name" class="auinput" />
+                <label for="name">Username</label>
+                <span>Username</span>
+              </div>
+              <div class="auinput-container">
+                <input type="email" name="email" class="auinput" />
+                <label for="email">Email</label>
+                <span>Email</span>
+              </div>
+              <div class="auinput-container">
+                <input type="tel" name="phone" class="auinput" />
+                <label for="phone">Phone</label>
+                <span>Phone</span>
+              </div>
+              <div class="auinput-container textarea">
+                <textarea name="message" class="auinput"></textarea>
+                <label for="message">Message</label>
+                <span>Message</span>
+              </div>
+              <input type="submit" value="Send" class="aubtn" />
+              <br>
+            </form>
+          </div>
+        </div>
+      </div>
+    <script src="assets/js/about-us.js"></script>
+  </body>
+</html>

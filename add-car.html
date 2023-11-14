@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.png"
+      type="image/svg+xml"
+    />
+    <link rel="stylesheet" href="./assets/css/car.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <title>SRF- Add Car</title>
+  </head>
+  <body>
+    <header class="header fade-in" data-header>
+      <div class="container">
+        <div class="overlay" data-overlay></div>
+        <!-- Add the logo and title here -->
+        <a href="home.html" class="logo">
+          <img
+            src="assets/images/logo.png"
+            alt="SRF logo"
+            width="50"
+            height="50"
+          />
+        </a>
+        <h1 class="join">SRF Motors</h1>
+        <!-- Navigation Menu -->
+        <nav class="navbar hidden" data-navbar>
+          <ul class="navbar-list">
+            <li>
+              <a href="home.html" class="navbar-link" data-nav-link>Home</a>
+            </li>
+            <li>
+              <a href="about-us.html" class="navbar-link" data-nav-link
+                >About us</a
+              >
+            </li>
+            <li>
+              <a href="home.html#blog" class="navbar-link" data-nav-link>Blog</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <div class="header-contact"></div>
+          <button
+            class="nav-toggle-btn"
+            data-nav-toggle-btn
+            aria-label="Toggle Menu"
+          >
+            <span class="one"></span>
+            <span class="two"></span>
+            <span class="three"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="car_container swing-in">
+      <h1>Car Rental Service -Add Car</h1>
+      <br />
+      <form id="carForm">
+        <label for="image">Image URL:</label>
+        <input type="text" id="image" required />
+
+        <label for="brand">Brand:</label>
+        <input type="text" id="brand" required />
+
+        <label for="people">People:</label>
+        <input type="number" id="people" required />
+
+        <label for="fuel">Fuel:</label>
+        <input type="text" id="fuel" required />
+
+        <label for="kmPerLiter">Km per 1-litre:</label>
+        <input type="number" id="kmPerLiter" required />
+
+        <label for="gears">Gears (Automatic/Manual):</label>
+        <input type="text" id="gears" required />
+
+        <label for="gears">Cost:</label>
+        <input type="text" id="cost" required />
+
+        <button type="button" onclick="addCar()">Add Car</button>
+      </form>
+      <br /><br />
+      <center>
+        <a href="home.html"><button>View All Cars</button></a>
+      </center>
+    </div>
+
+    <script src="./carscript.js"></script>
+
+    <section class="section featured-car float-in" id="featured-car">
+      <div class="car_container">
+        <h1>All Cars</h1>
+        <div id="carList" class="card-container"></div>
+      </div>
+    </section>
+  </body>
+</html>

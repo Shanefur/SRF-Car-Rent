@@ -1,0 +1,81 @@
+/* Font Family */
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Font Weights */
+.thin {
+  font-weight: 100;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.semibold {
+  font-weight: 500;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.ultra {
+  font-weight: 800;
+}
+
+/* Base Font */
+body {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6em;
+}
+
+/* Colors */
+body {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.black {
+  color: #000000;
+}
+
+.dark-gray {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.gray {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.light-gray {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.lighter-gray {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.white {
+  color: #FFFFFF;
+}
+
+.accent {
+  color: #4285F4;
+}
+
+/* Form Settings */
+.form {
+  background: #FFFFFF;
+  width: 600px;
+}
+
+/* ... (rest of the code) */

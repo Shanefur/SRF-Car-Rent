@@ -1,0 +1,178 @@
+:root {
+  --primary: #ff561d;
+  --secondary: #f8f7f6;
+  --black: #000;
+  --white: hsl(55, 100%, 93%);
+  --border-radius: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+  box-shadow: 1px 1px 10px 5px rgb(241, 241, 241);
+  background-color: var(--white);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+.header .title {
+  padding: 1rem;
+  padding-top: 23px;
+  font-size: 2rem;
+}
+
+.header img {
+  height: 36px;
+  border-radius: var(--border-radius);
+  
+}
+
+.header a {
+  padding-top: 1.3rem;
+}
+
+.header-content {
+  width: 78.5%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+ 
+}
+
+.logo {
+  display: flex;
+}
+
+.navbar-list {
+  display: flex;
+  gap: 1.5rem;
+  font-weight: bold;
+  padding-top: 14px;
+  
+}
+
+.navbar-list li {
+  padding: 10px;
+  
+}
+
+.navbar a {
+  text-decoration: none;
+  color:rgb(94, 94, 94);
+  
+}
+
+.navbar .primary {
+  background-color: var(--primary);
+  padding: 10px;
+  border-radius: var(--border-radius);
+}
+
+.navbar .primary a {
+  color: var(--white);
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding-right: 375px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  position: relative;
+  background: var(--primary);
+  color: var(--color, var(--white));
+  min-width: var(--width, 40px);
+  min-height: var(--height, 40px);
+  padding: 5px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to the element */
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+.sliding-text {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideIn 1s ease-out forwards, fadeIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+  }
+}
+.flip-in {
+  opacity: 0;
+  transform: perspective(400px) rotateY(90deg);
+  animation: flipIn 1s ease-out forwards;
+}
+
+@keyframes flipIn {
+  to {
+    opacity: 1;
+    transform: perspective(400px) rotateY(0);
+  }
+}
+.flip-in {
+  opacity: 0;
+  transform: perspective(400px) rotateY(90deg);
+  animation: flipIn 1s ease-out forwards;
+}
+
+@keyframes flipIn {
+  to {
+    opacity: 1;
+    transform: perspective(400px) rotateY(0);
+  }
+}
+.swing-in {
+  opacity: 0;
+  transform: rotate(10deg);
+  animation: swingIn 1s ease-out forwards;
+}
+
+@keyframes swingIn {
+  to {
+    opacity: 1;
+    transform: rotate(0);
+  }
+}
+.float-in {
+  opacity: 0;
+  transform: translateY(20vh);
+  animation: floatIn 1s ease-out forwards;
+}
+
+@keyframes floatIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

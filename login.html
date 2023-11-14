@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login/Signup</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/svg+xml">
+
+    <!-- Custom CSS Link -->
+    <link rel="stylesheet" href="./assets/css/style1.css" />
+
+    <!-- Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Animation Styles -->
+    <style>
+      .box_container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: white; /* Added white background */
+        padding: 20px; /* Added padding for better aesthetics */
+      }
+
+      .btn-container {
+        display: flex;
+        flex-direction: column; /* Changed to column */
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      .btn-container button {
+        transition: background-color 0.3s ease-in-out;
+        margin-bottom: 10px;
+      }
+
+      .selected {
+        background-color: navy;
+        color: white;
+      }
+
+      .card {
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 0.5s ease-in-out;
+        position: relative; /* Added position relative */
+      }
+
+      .login-form,
+      .signup-form {
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        width: 100%; /* Added width to take full container width */
+        transform: translateX(0%);
+      }
+
+      .fade-in {
+        opacity: 1;
+      }
+
+      .fade-out {
+        opacity: 0;
+      }
+
+      #errorText {
+        color: red;
+        margin-top: 10px;
+        order: 3;
+        text-align: center; /* Center the text */
+        margin-left: auto; /* Move it to the center horizontally */
+        margin-right: auto; /* Move it to the center horizontally */
+        margin-bottom: 20px; /* Add space below the login button */
+      }
+
+      .signup_placeholder-image,
+      .login_placeholder-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        border-radius: 10px;
+      }
+
+      .login_placeholder-image.active {
+        background-image: url("./assets/images/login.jpg"); /* Add the path to your login image placeholder */
+      }
+
+      .signup_placeholder-image.active {
+        background-image: url("./assets/images/signup.jpg"); /* Add the path to your signup image placeholder */
+      }
+
+      .login-form,
+      .signup-form {
+        position: relative;
+        z-index: 1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header class="header" data-header>
+      <div class="container">
+        <div class="overlay" data-overlay></div>
+        <a href="home.html" class="logo">
+          <img src="assets/images/logo.png" alt="SRF logo" width="50" height="50">
+        </a>
+        <h1>SRF Motors</h1>
+        <nav class="navbar hidden" data-navbar>
+          <ul class="navbar-list">
+            <li>
+              <a href="home.html" class="navbar-link" data-nav-link>Home</a>
+            </li>
+            <li>
+              <a href="about-us.html" class="navbar-link" data-nav-link
+                >About us</a
+              >
+            </li>
+            <li>
+              <a href="home.html#blog" class="navbar-link" data-nav-link>Blog</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <div class="header-contact"></div>
+          <button
+            class="nav-toggle-btn"
+            data-nav-toggle-btn
+            aria-label="Toggle Menu"
+          >
+            <span class="one"></span>
+            <span class="two"></span>
+            <span class="three"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+      <article>
+        <!-- Login Form Section -->
+        <section
+          class="section login-form fade-in"
+          style="text-align: center; margin-top: 50px"
+        >
+          <div
+            class="box_container"
+            style="display: inline-block; text-align: left"
+          >
+            <div class="card">
+              <div
+                class="signup_placeholder-image"
+                id="signupImageOverlay"
+              ></div>
+
+              <form id="loginForm" class="login-form">
+                <div class="btn-container">
+                  <b>Not a member?</b><br />
+                  <button
+                    type="button"
+                    class="btn signup-btn"
+                    onclick="toggleButton('signup-btn')"
+                  >
+                    Sign up
+                  </button>
+                </div>
+                <label for="username" class="input-label">Username</label>
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  class="input-field"
+                  required
+                />
+
+                <label for="password" class="input-label">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  class="input-field"
+                  required
+                />
+
+                <button type="button" class="btn" onclick="login()">
+                  Login
+                </button>
+                <p id="errorText"></p>
+              </form>
+            </div>
+            <!-- Signup Form -->
+            <div class="card">
+              <div class="login_placeholder-image" id="loginImageOverlay"></div>
+              <form id="signupForm" class="signup-form fade-out">
+                <label for="signup-username" class="input-label"
+                  >Username</label
+                >
+                <input
+                  type="text"
+                  id="signup-username"
+                  name="signup-username"
+                  class="input-field"
+                  required
+                />
+
+                <label for="signup-password" class="input-label"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  id="signup-password"
+                  name="signup-password"
+                  class="input-field"
+                  required
+                />
+
+                <button type="button" class="btn" onclick="signup()">
+                  Sign up
+                </button>
+                <div class="btn-container">
+                  <br />
+                  <b>Already a Member?</b><br />
+                  <button
+                    type="button"
+                    class="btn login-btn selected"
+                    onclick="toggleButton('login-btn')"
+                  >
+                    Login
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer fade-in">
+      <!-- Your footer content here -->
+    </footer>
+
+    <!-- Custom JavaScript Link -->
+    <script src="./assets/js/script.js"></script>
+
+    <!-- JavaScript for Animation and Form Handling -->
+    <script>
+      let isLoginPage = true; // Variable to track whether the user is on the login page
+
+      function toggleButton(button) {
+        const loginBtn = document.querySelector(".login-btn");
+        const signupBtn = document.querySelector(".signup-btn");
+        const loginForm = document.getElementById("loginForm");
+        const signupForm = document.getElementById("signupForm");
+        const loginImageOverlay = document.getElementById("loginImageOverlay");
+        const signupImageOverlay =
+          document.getElementById("signupImageOverlay");
+
+        if (button === "login-btn") {
+          isLoginPage = true;
+          loginBtn.classList.add("selected");
+          signupBtn.classList.remove("selected");
+          loginForm.classList.remove("fade-out");
+          loginForm.classList.add("fade-in");
+          signupForm.classList.remove("fade-in");
+          signupForm.classList.add("fade-out");
+          loginImageOverlay.classList.add("active");
+          signupImageOverlay.classList.remove("active");
+        } else {
+          isLoginPage = false;
+          loginBtn.classList.remove("selected");
+          signupBtn.classList.add("selected");
+          loginForm.classList.remove("fade-in");
+          loginForm.classList.add("fade-out");
+          signupForm.classList.remove("fade-out");
+          signupForm.classList.add("fade-in");
+          loginImageOverlay.classList.remove("active");
+          signupImageOverlay.classList.add("active");
+        }
+      }
+
+      function signup() {
+        const signupUsername = document.getElementById("signup-username").value;
+        const signupPassword = document.getElementById("signup-password").value;
+
+        // Retrieve existing users from localStorage
+        const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
+
+        // Check if the user already exists
+        const userExists = existingUsers.some(
+          (user) => user.username === signupUsername
+        );
+
+        if (userExists) {
+          alert("User already exists. Please choose a different username.");
+        } else {
+          // Add the new user to the array
+          const newUser = {
+            username: signupUsername,
+            password: signupPassword,
+          };
+          existingUsers.push(newUser);
+
+          // Save the updated user list to localStorage
+          localStorage.setItem("users", JSON.stringify(existingUsers));
+
+          alert(`Signup successful!`);
+          clearForm("signupForm");
+          toggleButton("login-btn");
+        }
+      }
+
+      function login() {
+        const loginUsername = document.getElementById("username").value;
+        const loginPassword = document.getElementById("password").value;
+
+        // Retrieve existing users from localStorage
+        const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
+
+        // Check if the user exists and the password is correct
+        const user = existingUsers.find(
+          (user) =>
+            user.username === loginUsername && user.password === loginPassword
+        );
+
+        const errorText = document.getElementById("errorText");
+
+        if (user) {
+          // Login successful
+          alert("Login successful!");
+          clearForm("loginForm");
+          errorText.textContent = "";
+
+          // Redirect to add-car.html or any other page you desire
+          window.location.href = "add-car.html";
+        } else {
+          // Incorrect username or password
+          errorText.textContent = "Incorrect Username/Password entered.";
+          // Do not clear the error message automatically
+        }
+      }
+
+      function clearForm(formId) {
+        const form = document.getElementById(formId);
+        form.reset();
+      }
+
+      // Initial setup, show login or signup placeholder based on the current page
+      window.addEventListener("DOMContentLoaded", function () {
+        if (isLoginPage) {
+          document.getElementById("loginImageOverlay").classList.add("active");
+        } else {
+          document.getElementById("signupImageOverlay").classList.add("active");
+        }
+      });
+    </script>
+  </body>
+</html>
