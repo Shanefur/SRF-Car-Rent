@@ -1427,3 +1427,18 @@ button:hover {
 }
 
 
+select {
+  padding: 10px; /* Adjust the padding as needed */
+  font-size: 16px; /* Adjust the font size as needed */
+  width: 100%; /* Make the dropdown take the full width of its container */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.car_container1{
+  max-width: 800px;
+  margin: 150px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
