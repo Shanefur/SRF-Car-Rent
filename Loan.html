@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.png"
+      type="image/svg+xml"
+    />
+    <link rel="stylesheet" href="./assets/css/car.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <title>SRF- Calculate Loan</title>
+
+    
+  </head>
+  <body>
+    <header class="header fade-in" data-header>
+      <div class="container">
+        <div class="overlay" data-overlay></div>
+        <!-- Add the logo and title here -->
+        <a href="home.html" class="logo">
+          <img
+            src="assets/images/logo.png"
+            alt="SRF logo"
+            width="50"
+            height="50"
+          />
+        </a>
+        <h1 class="join">SRF Motors</h1>
+        <!-- Navigation Menu -->
+        <nav class="navbar hidden" data-navbar>
+          <ul class="navbar-list">
+            <li>
+              <a href="home.html" class="navbar-link" data-nav-link>Home</a>
+            </li>
+            <li>
+              <a href="about-us.html" class="navbar-link" data-nav-link
+                >About us</a
+              >
+            </li>
+
+            <li>
+              <a href="home.html#blog" class="navbar-link" data-nav-link>Blog</a>
+            </li>
+           
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <div class="header-contact"></div>
+          <button
+            class="nav-toggle-btn"
+            data-nav-toggle-btn
+            aria-label="Toggle Menu"
+          >
+            <span class="one"></span>
+            <span class="two"></span>
+            <span class="three"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="car_container swing-in">
+     
+      <div class="loan-calculator">
+        <h2>Loan Calculator</h2>
+        <label for="category">Category:</label>
+<select id="category" required>
+  <option value="Junior">Junior</option>
+  <option value="Senior">Senior</option>
+  <option value="SeniorCitizen">Senior Citizen</option>
+</select>
+
+        <label for="loanAmount">Loan Amount:</label>
+        <input type="number" id="loanAmount" required />
+
+        <label for="downPayment">Down Payment:</label>
+        <input type="number" id="downPayment" required />
+
+        <label for="loanTerm">Loan Term (in months):</label>
+        <input type="number" id="loanTerm" required />
+<br>
+       <center><button onclick="calculateLoan()">Calculate</button></center> <br>
+       <center>
+        <a href="home.html"><button>View All Cars</button></a>
+      </center>
+</div></div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const loanAmountField = document.getElementById('loanAmount');
+
+      // Retrieve selected car cost from local storage
+      const selectedCarCost = localStorage.getItem('selectedCarCost');
+
+      // Display selected car cost in the loan amount field
+      loanAmountField.value = selectedCarCost;
+    });
+
+  </script>
+
+<div class="car_container1 fade-in">
+    <h2>Loan Details</h2><br>
+        <div id="loanResult" class="result"></div>
+      </div>
+
+     
+    </div>
+
+    <script src="assets/js/interest.js"></script>
+
+  </body>
+</html>
