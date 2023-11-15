@@ -96,3 +96,9 @@ for (let i = 0; i < navbarLinks.length; i++) {
   navbarLinks[i].addEventListener("click", navToggleFunc);
 }
 const header = document.querySelector("[data-header]");
+
+
+function redirectToLoanPage() {
+  window.location.href = 'loan.html';
+}
+
