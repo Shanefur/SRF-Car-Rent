@@ -73,6 +73,12 @@ function loadCars() {
               <p class="card-text">
                 <span style="font-weight: bold">Cost:</span> ${car.cost}
               </p>
+
+
+              <!-------Loan EMI---->
+              <center>
+              <button onclick="calculateEmi('${car.cost}')">Calculate EMI</button>
+              <center>
             </div>
           </div>
         </div>
@@ -83,7 +89,10 @@ function loadCars() {
 
 loadCars();
 
-
+function calculateEmi(carCost) {
+  localStorage.setItem("selectedCarCost", carCost);
+  window.location.href = "loan.html";
+}
 
 
     function toggleMobileNav() {
@@ -93,4 +102,31 @@ loadCars();
       navbar.classList.toggle('mobile-active');
       body.classList.toggle('mobile-nav-open', navbar.classList.contains('mobile-active'));
     };
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // Retrieve existing loan data from localStorage
+      let existingLoans = localStorage.getItem('loans');
+      existingLoans = existingLoans ? JSON.parse(existingLoans) : [];
+
+      // Display loan details on the page
+      const loanListContainer = document.getElementById('loanList');
+
+      existingLoans.forEach(function (loan, index) {
+        const loanItem = document.createElement('div');
+        loanItem.classList.add('loan-item');
+
+        loanItem.innerHTML = `
+          <p><strong>Category:</strong> ${loan.category}</p>
+          <p><strong>Down Payment:</strong> Rs${loan.downPayment}</p>
+          <p><strong>Loan Term:</strong> ${loan.loanTerm} months</p>
+          <p><strong>Monthly Payment:</strong> Rs${loan.monthlyPayment}</p>
+          <p><strong>Net Interest:</strong> Rs${loan.netInterest}</p>
+          <br>
+          <p><strong>Total Payment:</strong> Rs${loan.totalPayment}</p>
+        `;
+
+        loanListContainer.appendChild(loanItem);
+        clearLoanStorage();
+      });
+    });
 
