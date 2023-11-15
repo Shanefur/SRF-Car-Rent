@@ -593,3 +593,16 @@ font-size: small;
     padding-bottom: 10px;
   }
 }
+
+button {
+  padding: 0.5rem 1rem; 
+  border-radius: 20px;
+  background-color: rgb(210, 236, 93);/* Add some padding to the button */
+}
+.container1{
+  max-width: 100%;
+  background-color: #f56c6c;
+  padding: 20px;
+  border-radius: 8px;
+  
+}
